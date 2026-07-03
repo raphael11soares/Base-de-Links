@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle - Links Úteis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --primary-color: #0052cc;
+            --accent-color: #00b4d8;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 🔒 Força a página a começar 100% invisível */
+        #conteudo-seguro {
+            display: none;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            margin-right: 15px;
+            color: var(--primary-color);
+            width: 40px;
+            text-align: center;
+        }
+
+        .card-info h3 {
+            font-size: 1.1rem;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+
+        .card-info p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 200px;
+        }
+
+        .dash-card .card-icon { color: #e11d48; } 
+        .sheet-card .card-icon { color: #16a34a; } 
+        
+        .disabled-card {
+            opacity: 0.6;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="conteudo-seguro" class="container">
+        <header>
+            <h1>Central de Acessos &amp; Links</h1>
+            <p>Seu painel rápido de ferramentas, dashboards e planilhas</p>
+        </header>
+
+        <h2 class="section-title"><i class="fa-solid fa-link"></i> Controle de Links</h2>
+        <div class="grid">
+            <a href="https://platform.senior.com.br/senior-x/#/" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-building-user"></i></div>
+                <div class="card-info"><h3>Senior</h3><p>platform.senior.com.br</p></div>
+            </a>
+            <a href="https://contabilizei.zendesk.com/agent/filters/6131993683484" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-headset"></i></div>
+                <div class="card-info"><h3>ZD (Filtros)</h3><p>Filtros de Agente</p></div>
+            </a>
+            <a href="https://contabilizei.zendesk.com/explore/studio#/dashboards/01DBE05477C4FB08CBE2246FD1D7AED264F941EA46966B2FF122702A6AF59330" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                <div class="card-info"><h3>ZD Online</h3><p>Zendesk Explore</p></div>
+            </a>
+            <a href="https://contabilizeicontabilidade.atlassian.net/jira/for-you" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-brands fa-jira"></i></div>
+                <div class="card-info"><h3>JIRA</h3><p>For You</p></div>
+            </a>
+            <a href="https://ctbz-experts.atlassian.net/browse/SOA-153" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-brands fa-jira"></i></div>
+                <div class="card-info"><h3>JIRA SOA</h3><p>SOA-153</p></div>
+            </a>
+            <a href="https://admin.ctbz.com.br/#/" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
+                <div class="card-info"><h3>Plataforma 2.0</h3><p>admin.ctbz.com.br</p></div>
+            </a>
+            <a href="https://contabilizei.inhire.app/" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-user-plus"></i></div>
+                <div class="card-info"><h3>Inhire</h3><p>Plataforma de Vagas</p></div>
+            </a>
+            <a href="https://contabilizei.inhire.app/contabilizei-interno/vagas" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="card-info"><h3>Vagas Internas</h3><p>Inhire Interno</p></div>
+            </a>
+            <a href="https://contabilizei.qualida.de/Login?ReturnUrl=%2fQUALIDADE%2fprincipal.aspx" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-check-double"></i></div>
+                <div class="card-info"><h3>2Clicks</h3><p>Qualidade</p></div>
+            </a>
+            <a href="https://contabilizei.learningflix.net/login/index.php" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="card-info"><h3>Academy</h3><p>Learningflix</p></div>
+            </a>
+            <a href="https://contabilizeiexperts.beedoo.io/login" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+                <div class="card-info"><h3>Beedoo</h3><p>Beedoo Login</p></div>
+            </a>
+            <a href="https://docs.google.com/presentation/d/1Sb0LddEeF0uxxE-QENtTtjq_lBYg-Duiz-v7J5chkoE/edit?slide=id.g3d4cd3dc43b_2_27#slide=id.g3d4cd3dc43b_2_27" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-file-powerpoint"></i></div>
+                <div class="card-info"><h3>Terça Sagrada</h3><p>Slides Google Docs</p></div>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/10jWEidf_klDHbMhxeN16jXVH3cSEKcpk2i06tl7m_Yc/edit?gid=548675862#gid=548675862" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                <div class="card-info"><h3>OnePage</h3><p>Planilha Google</p></div>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1luVcoyZTigp5DOE6npusZztT1C3HYaGWqCMtfb4rxdM/edit?gid=2017988799#gid=2017988799" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-square-poll-vertical"></i></div>
+                <div class="card-info"><h3>NPS/CSAT (LP Nacional)</h3><p>Votantes e Contestação</p></div>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1D9ie1vyc9fKA0e5Ah-znXKwortyOB6m08RftI5NJRVw/edit?pli=1&gid=1695183345#gid=1695183345" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-square-poll-vertical"></i></div>
+                <div class="card-info"><h3>NPS/CSAT (EXP LP)</h3><p>Votantes e Contestação</p></div>
+            </a>
+        </div>
+
+        <h2 class="section-title"><i class="fa-solid fa-chart-column"></i> Dashboards</h2>
+        <div class="grid">
+            <a href="https://datastudio.google.com/u/0/reporting/a381fec9-df5d-4724-a13c-efbf6f24da2a/page/p_1reubnt7rd?pli=1" target="_blank" class="card dash-card">
+                <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="card-info"><h3>Painel do Assessor</h3><p>Looker Studio</p></div>
+            </a>
+            <a href="https://datastudio.google.com/u/0/reporting/0197e9c5-27d9-47d9-8744-ecc6812e51ab/page/p_oeyl7zrewd" target="_blank" class="card dash-card">
+                <div class="card-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                <div class="card-info"><h3>Indicadores Desempenho</h3><p>Looker Studio</p></div>
+            </a>
+            <a href="https://datastudio.google.com/u/0/reporting/0197e9c5-27d9-47d9-8744-ecc6812e51ab/page/p_oeyl7zrewd?pli=1" target="_blank" class="card dash-card">
+                <div class="card-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+                <div class="card-info"><h3>Métricas Meio</h3><p>Looker Studio</p></div>
+            </a>
+            <a href="https://datastudio.google.com/reporting/39c54661-0262-4cf0-b9d8-7c62624e90e4/page/p_hqjfser3vd" target="_blank" class="card dash-card">
+                <div class="card-icon"><i class="fa-solid fa-smile-beam"></i></div>
+                <div class="card-info"><h3>NPS-CSAT Resolutividade</h3><p>Looker Studio</p></div>
+            </a>
+            <a href="https://datastudio.google.com/reporting/bdfc6a15-8ed0-44a1-b090-311f72a2f309/page/tEnnC" target="_blank" class="card dash-card">
+                <div class="card-icon"><i class="fa-solid fa-face-frown"></i></div>
+                <div class="card-info"><h3>CSAT BAD</h3><p>Looker Studio</p></div>
+            </a>
+            <a href="https://datastudio.google.com/u/0/reporting/0d044c27-63d6-4b6b-86b6-aa3d7e9fddf0/page/p_vowherzqzd?pli=1" target="_blank" class="card dash-card">
+                <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                <div class="card-info"><h3>Eficiência</h3><p>Looker Studio</p></div>
+            </a>
+            <a href="https://datastudio.google.com/u/0/reporting/268dda15-0e9b-417d-b5c2-3739177dc7ae/page/p_c051eyk7xd" target="_blank" class="card dash-card">
+                <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                <div class="card-info"><h3>Monitoria IA</h3><p>Looker Studio</p></div>
+            </a>
+            <a href="https://datastudio.google.com/reporting/5d36569d-3ae2-4301-825d-a432a29d7de7/page/p_v1g6qafcnd" target="_blank" class="card dash-card">
+                <div class="card-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <div class="card-info"><h3>DASH Antigo</h3><p>Looker Studio</p></div>
+            </a>
+        </div>
+
+        <h2 class="section-title"><i class="fa-solid fa-table"></i> Planilhas de Acompanhamento</h2>
+        <div class="grid">
+            <a href="https://docs.google.com/spreadsheets/d/1sY7ymP-VaJYWD2lYYafz2-_R3o-11mkUlCLSlGYaLR8/edit?gid=1893164577#gid=1893164577" target="_blank" class="card sheet-card">
+                <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+                <div class="card-info"><h3>Base Clientes Experts</h3><p>Google Sheets</p></div>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1YwoQYRSbPJu1NlNS9-9NI3sCZ_Hp9Io1pD0DqAxKhjM/edit?gid=0#gid=0" target="_blank" class="card sheet-card">
+                <div class="card-icon"><i class="fa-solid fa-table-cells-large"></i></div>
+                <div class="card-info"><h3>Quadro Experts</h3><p>Google Sheets</p></div>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1LyVXBfTMaaMMeAxpyH-pKpblNy4_6QyMUu3U4G7Yi_A/edit?gid=1363563780#gid=1363563780" target="_blank" class="card sheet-card">
+                <div class="card-icon"><i class="fa-solid fa-sitemap"></i></div>
+                <div class="card-info"><h3>Mapa de Times</h3><p>Google Sheets</p></div>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1onKiYDg_aA0tY7BqFEgilRDytX3Nogo2wvZd4L5apcY/edit?pli=1&gid=1492455748#gid=1492455748" target="_blank" class="card sheet-card">
+                <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                <div class="card-info"><h3>Saúde das Caixas</h3><p>Google Sheets</p></div>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1JPvHX9K0bIkup0N-MCtgQ-5HETrEzrTM/edit?pli=1&gid=1206719934#gid=1206719934" target="_blank" class="card sheet-card">
+                <div class="card-icon"><i class="fa-solid fa-file-signature"></i></div>
+                <div class="card-info"><h3>Procurações a Vencer</h3><p>Google Sheets</p></div>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1MIM5l07XeJJVL9Yr2Ze089GZPhjzZu4N36CViRoZ6cA/edit?pli=1&gid=1020896597#gid=1020896597" target="_blank" class="card sheet-card">
+                <div class="card-icon"><i class="fa-solid fa-ranking-star"></i></div>
+                <div class="card-info"><h3>CSAT/NPS Expert</h3><p>Assessoria</p></div>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1re3nzY1MD1QlZUEjKtT58o6KvarzwEaBbSRC9JN2cAA/edit?gid=1656313643#gid=1656313643" target="_blank" class="card sheet-card">
+                <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+                <div class="card-info"><h3>Focais LP Nacional</h3><p>Google Sheets</p></div>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/15YJZsfqLNiPk8ZnjnATrPfP_aVkwOJfviiHAuckph-w/edit?gid=1835337415#gid=1835337415" target="_blank" class="card sheet-card">
+                <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+                <div class="card-info"><h3>Focais LP Exportação</h3><p>Google Sheets</p></div>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1xuW7WPyCbFhX9R1lP9QfSzAyppPIwG0U7-KN0PuD5Ek/edit?pli=1&gid=793825716#gid=793825716" target="_blank" class="card sheet-card">
+                <div class="card-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+                <div class="card-info"><h3>Migração Carteiras</h3><p>Clientes Migração</p></div>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1ggUiG37gQIrjekXqrmlDsocIxMng0udHU6L5rriN5vM/edit?gid=785279139#gid=785279139" target="_blank" class="card sheet-card">
+                <div class="card-icon"><i class="fa-solid fa-map-pin"></i></div>
+                <div class="card-info"><h3>Clientes SP EXP</h3><p>Google Sheets</p></div>
+            </a>
+            <a href="#" class="card sheet-card disabled-card">
+                <div class="card-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div class="card-info"><h3>Pré Churn</h3><p>Link não informado</p></div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const SENHA_CORRETA = "lp2026"; 
+        let tentativa = prompt("Digite a senha para acessar o painel:");
+
+        if (tentativa === SENHA_CORRETA) {
+            // Se acertar a senha, torna a página visível
+            document.getElementById('conteudo-seguro').style.display = 'block';
+        } else {
+            alert("Senha incorreta!");
+            document.body.innerHTML = "<h1 style='text-align:center; margin-top:100px; color:#e11d48; font-family:sans-serif;'>Acesso Negado</h1>";
+        }
+    </script>
+
+</body>
+</html>
