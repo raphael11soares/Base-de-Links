@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel de Controle - Links Úteis</title>
+    <!-- Ícone da aba do navegador (Favicon) 🚀 -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <!-- Ícones visuais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -134,12 +136,14 @@
 </head>
 <body>
 
+    <!-- Todo o conteúdo envelopado aqui dentro -->
     <div id="conteudo-seguro" class="container">
         <header>
             <h1>Central de Acessos &amp; Links</h1>
             <p>Seu painel rápido de ferramentas, dashboards e planilhas</p>
         </header>
 
+        <!-- CATEGORIA: CONTROLE DE LINKS -->
         <h2 class="section-title"><i class="fa-solid fa-link"></i> Controle de Links</h2>
         <div class="grid">
             <a href="https://platform.senior.com.br/senior-x/#/" target="_blank" class="card">
@@ -208,6 +212,7 @@
             </a>
         </div>
 
+        <!-- CATEGORIA: DASHBOARDS -->
         <h2 class="section-title"><i class="fa-solid fa-chart-column"></i> Dashboards</h2>
         <div class="grid">
             <a href="https://datastudio.google.com/u/0/reporting/a381fec9-df5d-4724-a13c-efbf6f24da2a/page/p_1reubnt7rd?pli=1" target="_blank" class="card dash-card">
@@ -234,6 +239,11 @@
                 <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
                 <div class="card-info"><h3>Eficiência</h3><p>Looker Studio</p></div>
             </a>
+            <!-- NOVO LINK BANCO DE HORAS -->
+            <a href="https://datastudio.google.com/u/0/reporting/2a532aa0-07c0-4ec9-9881-9c9edadb4a5e/page/p_aqwur5zc0d" target="_blank" class="card dash-card">
+                <div class="card-icon"><i class="fa-solid fa-business-time"></i></div>
+                <div class="card-info"><h3>Banco de horas</h3><p>Looker Studio</p></div>
+            </a>
             <a href="https://datastudio.google.com/u/0/reporting/268dda15-0e9b-417d-b5c2-3739177dc7ae/page/p_c051eyk7xd" target="_blank" class="card dash-card">
                 <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
                 <div class="card-info"><h3>Monitoria IA</h3><p>Looker Studio</p></div>
@@ -244,6 +254,7 @@
             </a>
         </div>
 
+        <!-- CATEGORIA: PLANILHAS -->
         <h2 class="section-title"><i class="fa-solid fa-table"></i> Planilhas de Acompanhamento</h2>
         <div class="grid">
             <a href="https://docs.google.com/spreadsheets/d/1sY7ymP-VaJYWD2lYYafz2-_R3o-11mkUlCLSlGYaLR8/edit?gid=1893164577#gid=1893164577" target="_blank" class="card sheet-card">
@@ -293,6 +304,7 @@
         </div>
     </div>
 
+    <!-- 🔑 Validação de segurança no final do carregamento -->
     <script>
         const SENHA_CORRETA = "lp2026"; 
         let tentativa = prompt("Digite a senha para acessar o painel:");
